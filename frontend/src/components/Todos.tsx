@@ -65,7 +65,7 @@ function AddTodo() {
       item: item,
     };
  
-    fetch("http://localhost:8000/todo", {
+    fetch("http://54.253.235.39:8000/todo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const UpdateTodo = ({
   const [todo, setTodo] = useState(item);
  
   const updateTodo = async () => {
-    await fetch(`http://localhost:8000/todo/${id}`, {
+    await fetch(`http://54.253.235.39:8000/todo/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -168,7 +168,7 @@ const DeleteTodo = ({
   fetchTodos,
 }: DeleteTodoProps) => {
   const deleteTodo = async () => {
-    await fetch(`http://localhost:8000/todo/${id}`, {
+    await fetch(`http://54.253.235.39:8000/todo/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -227,7 +227,7 @@ export default function Todos() {
  
   const fetchTodos = async () => {
     const response = await fetch(
-      "http://localhost:8000/todo"
+      "http://54.253.235.39:8000/todo"
     );
  
     const todos = await response.json();
