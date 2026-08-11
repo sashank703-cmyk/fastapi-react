@@ -18,12 +18,15 @@ pipeline {
             }
         }
  
-        stage('Stop Old Containers') {
-            steps {
-                echo 'Stopping old containers'
-                sh 'docker compose down || true'
-            }
-        }
+       stage('Stop Old Containers') {
+    steps {
+        echo 'Stopping old containers'
+        sh '''
+            docker compose down --remove-orphans || true
+            docker rm -f fastapi-backend react-frontend || true
+        '''
+    }
+}
  
         stage('Deploy Application') {
             steps {
