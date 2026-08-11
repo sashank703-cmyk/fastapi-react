@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 todos = [
     {
         "id": "1",
-        "item": "Read a book."
+        "item": "Reading a book."
     },
     {
         "id": "2",
