@@ -1,0 +1,17 @@
+services:
+ 
+  backend:
+    build:
+      context: ./backend
+    container_name: fastapi-backend
+    ports:
+      - "8000:8000"
+ 
+  frontend:
+    build:
+      context: ./frontend
+    container_name: react-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
