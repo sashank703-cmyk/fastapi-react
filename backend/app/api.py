@@ -5,11 +5,11 @@ from fastapi.middleware.cors import CORSMiddleware
 todos = [
     {
         "id": "1",
-        "item": "Reading a book."
+        "item": "Readlines of book."
     },
     {
         "id": "2",
-        "item": "Cycle around town."
+        "item": "New guy in town."
     }
 ]
 
@@ -17,7 +17,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-    "http://54.253.235.39"
+    "http://3.24.123.219"
 ]
 
 
